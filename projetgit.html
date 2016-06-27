@@ -6,93 +6,101 @@
   <meta charset="utf-8">
   <title>cheat sheet de git</title>
   <link rel="stylesheet" href="style.css">
+  <div class="Degrade">
+  </div>
+
 </head>
 
 <body>
+<div id="bande_horizontale">
 <h1>cheat sheet de git</h1>
-
+</div>
+<!-- partie 1 -->
 <h3>Configurer Git</h3>
 
 <p>Maintenant que Git est installé, vous devriez avoir une console ouverte dans laquelle vous allez pouvoir taper des commandes de Git.
-<br>
+<br><br>
 Dans la console, commencez par envoyer ces trois lignes :
-<br>
-git config --global color.diff auto
-git config --global color.status auto
-git config --global color.branch auto
-<br>
+<br><br>
+git config --global color.diff auto<br>
+git config --global color.status auto<br>
+git config --global color.branch auto<br>
+<br><br>
 Elles activeront la couleur dans Git. Il ne faut le faire qu’une fois, et ça aide à la lisibilité des messages dans la console.
-<br>
+<br><br>
 De même, il faut configurer votre nom (ou pseudo) :
-<br>
+<br><br>
 git config --global user.name "votre_pseudo"
-<br>
+<br><br>
 Puis votre e-mail :
-<br>
+<br><br>
 git config --global user.email moi@email.com
-<br>
+<br><br>
 Vous pouvez aussi éditer votre fichier de configuration .gitconfig situé dans votre répertoire personnel pour y ajouter une section alias à la fin :
-<br>
+<br><br>
 vim ~/.gitconfig
-<br>
+<br><br>
 [color]
-        diff = auto
-        status = auto
-        branch = auto
+        diff = auto<br>
+        status = auto<br>
+        branch = auto<br>
 [user]
-        name = votre_pseudo
-        email = moi@email.com
+        name = votre_pseudo<br>
+        email = moi@email.com<br>
 [alias]
-        ci = commit
-        co = checkout
-        st = status
-        br = branch
-<br>
-Ces alias permettent de raccourcir certaines commandes de Git. Ainsi, au lieu d’écrire <br>
--git checkout <br>
-vous pourrez écrire si vous le désirez <br>
--git co <br> 
-ce qui est plus court. <br>
+        ci = commit<br>
+        co = checkout<br>
+        st = status<br>
+        br = branch<br>
+<br><br>
+Ces alias permettent de raccourcir certaines commandes de Git. Ainsi, au lieu d’écrire <br><br>
+-git checkout <br><br>
+vous pourrez écrire si vous le désirez <br><br>
+-git co <br> <br>
+ce qui est plus court. <br><br>
 
--git add nomfichier1 nomfichier2
-pour ajouter les fichiers à la liste de ceux devant faire l’objet d’un commit, puis faire un
--git commit
-. Si vous faites un
--git status
-après un
--git add
-vous les verrez alors en vert ;
+-git add nomfichier1 nomfichier2<br><br>
+pour ajouter les fichiers à la liste de ceux devant faire l’objet d’un commit, puis faire un<br><br>
+-git commit<br><br>
+. Si vous faites un<br><br>
+-git status<br><br>
+après un<br><br>
+-git add<br><br>
+vous les verrez alors en vert ;<br>
 </p>
 
+<!-- partie 2 -->
 <h3>Créer un nouveau dépôt</h3>
 
-<p>Commencez par créer un dossier du nom de votre projet sur votre disque. <br>
+<p>Commencez par créer un dossier du nom de votre projet sur votre disque. <br><br>
 
--cd /home/mateo21
--mkdir plusoumoins
--cd plusoumoins <br>
+-cd /home/mateo21<br>
+-mkdir plusoumoins<br>
+-cd plusoumoins <br><br>
 
-Ensuite, initialisez un dépôt Git tout neuf dans ce dossier avec la commande : <br>
-git init <br>
+Ensuite, initialisez un dépôt Git tout neuf dans ce dossier avec la commande : <br><br>
+git init <br><br>
 
 </p>
-
+<!-- partie 3 -->
 <h3>Effectuer un commit des changements</h3>
 
 <p>En faisant
 git status
-, vous devriez voir les fichiers que vous avez modifiés en rouge. Cela signifie qu’ils ne seront pas pris en compte lorsque vous allez faire un commit. <br>
+, vous devriez voir les fichiers que vous avez modifiés en rouge.<br>
+ Cela signifie qu’ils ne seront pas pris en compte lorsque vous allez faire un commit. <br><br>
 
-faire
--git commit -a
-pour « commiter » tous les fichiers qui étaient listés dans
--git status
-dans les colonnes « Changes to be committed » et « Changed but not updated » (qu’ils soient en vert ou en rouge) ; <br>
+faire<br><br>
+-git commit -a<br><br>
+pour « commiter » tous les fichiers qui étaient listés dans<br><br>
+-git status<br><br>
+dans les colonnes « Changes to be committed » et « Changed but not updated » (qu’ils soient en vert ou en rouge) ; <br><br>
 
+<!-- partie 4-->
 <h3>l'envoi</h3>
 
 <p>
-Une fois que vous êtes sûrs, passez à l’envoi. Vous pouvez envoyer vos commits avec la commande <br>
+Une fois que vous êtes sûrs, passez à l’envoi. Vous pouvez envoyer vos commits avec la commande <br><br>
 -git push
 </p>
 
